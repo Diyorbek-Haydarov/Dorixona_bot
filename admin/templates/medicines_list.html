@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}Medicines - PharmaGuide Admin{% endblock %}
+{% block page_title %}Medicines Management{% endblock %}
+
+{% block page_actions %}
+<div class="btn-group">
+    <a href="{{ url_for('add_medicine') }}" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Add Medicine
+    </a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Medicines List</h6>
+        <span class="badge bg-primary">{{ medicines|length }} medicines</span>
+    </div>
+    <div class="card-body">
+        {% if medicines %}
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name (Latin)</th>
+                            <th>Name (Cyrillic)</th>
+                            <th>Description</th>
+                            <th>Voice</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for medicine in medicines %}
+                        <tr>
+                            <td>{{ medicine.id }}</td>
+                            <td>
+                                <strong>{{ medicine.name_latin }}</strong>
+                            </td>
+                            <td>
+                                <strong>{{ medicine.name_cyrillic }}</strong>
+                            </td>
+                            <td>
+                                <small class="text-muted">
+                                    {{ medicine.description_latin[:50] + '...' if medicine.description_latin and medicine.description_latin|length > 50 else medicine.description_latin or 'N/A' }}
+                                </small>
+                            </td>
+                            <td class="text-center">
+                                {% if medicine.voice_file_id %}
+                                    <i class="fas fa-volume-up text-success" title="Voice available"></i>
+                                {% else %}
+                                    <i class="fas fa-volume-mute text-muted" title="No voice"></i>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="btn-group-actions">
+                                    <a href="{{ url_for('edit_medicine', medicine_id=medicine.id) }}" 
+                                       class="btn btn-sm btn-outline-primary" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <form method="POST" action="{{ url_for('delete_medicine', medicine_id=medicine.id) }}" 
+                                          style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this medicine?')">
+                                        <button type="submit" class="btn btn-sm btn-outline-danger btn-delete" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="text-center py-5">
+                <i class="fas fa-pills fa-3x text-muted mb-3"></i>
+                <h5 class="text-muted">No medicines found</h5>
+                <p class="text-muted">Start by adding your first medicine.</p>
+                <a href="{{ url_for('add_medicine') }}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Medicine
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Add search functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Create search input
+    var searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.className = 'form-control mb-3';
+    searchInput.placeholder = 'Search medicines...';
+    searchInput.id = 'medicineSearch';
+    
+    // Insert search input before the table
+    var cardBody = document.querySelector('.card-body');
+    if (cardBody && document.querySelector('table')) {
+        cardBody.insertBefore(searchInput, cardBody.firstChild);
+        
+        // Add search functionality
+        searchInput.addEventListener('keyup', function() {
+            var filter = this.value.toLowerCase();
+            var table = document.querySelector('table tbody');
+            var rows = table.getElementsByTagName('tr');
+            
+            for (var i = 0; i < rows.length; i++) {
+                var latinName = rows[i].cells[1].textContent.toLowerCase();
+                var cyrillicName = rows[i].cells[2].textContent.toLowerCase();
+                
+                if (latinName.indexOf(filter) > -1 || cyrillicName.indexOf(filter) > -1) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

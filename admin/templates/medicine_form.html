@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'Edit' if medicine.id else 'Add' }} Medicine - PharmaGuide Admin{% endblock %}
+{% block page_title %}{{ 'Edit' if medicine.id else 'Add' }} Medicine{% endblock %}
+
+{% block page_actions %}
+<div class="btn-group">
+    <a href="{{ url_for('medicines_list') }}" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Back to List
+    </a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card shadow">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">
+                    {{ 'Edit' if medicine.id else 'Add' }} Medicine Information
+                </h6>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="row">
+                        <!-- Latin Script Section -->
+                        <div class="col-md-6">
+                            <h5 class="text-primary mb-3">
+                                <i class="fas fa-language"></i> Latin Script (O'zbek)
+                            </h5>
+                            
+                            <div class="mb-3">
+                                <label for="name_latin" class="form-label">
+                                    Medicine Name <span class="required">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="name_latin" name="name_latin" 
+                                       value="{{ medicine.name_latin or '' }}" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description_latin" class="form-label">Description</label>
+                                <textarea class="form-control" id="description_latin" name="description_latin" 
+                                          rows="3">{{ medicine.description_latin or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="composition_latin" class="form-label">Composition</label>
+                                <textarea class="form-control" id="composition_latin" name="composition_latin" 
+                                          rows="3">{{ medicine.composition_latin or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="usage_latin" class="form-label">Usage Instructions</label>
+                                <textarea class="form-control" id="usage_latin" name="usage_latin" 
+                                          rows="3">{{ medicine.usage_latin or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="side_effects_latin" class="form-label">Side Effects</label>
+                                <textarea class="form-control" id="side_effects_latin" name="side_effects_latin" 
+                                          rows="3">{{ medicine.side_effects_latin or '' }}</textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Cyrillic Script Section -->
+                        <div class="col-md-6">
+                            <h5 class="text-info mb-3">
+                                <i class="fas fa-language"></i> Cyrillic Script (Ўзбек)
+                            </h5>
+                            
+                            <div class="mb-3">
+                                <label for="name_cyrillic" class="form-label">
+                                    Medicine Name <span class="required">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="name_cyrillic" name="name_cyrillic" 
+                                       value="{{ medicine.name_cyrillic or '' }}" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description_cyrillic" class="form-label">Description</label>
+                                <textarea class="form-control" id="description_cyrillic" name="description_cyrillic" 
+                                          rows="3">{{ medicine.description_cyrillic or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="composition_cyrillic" class="form-label">Composition</label>
+                                <textarea class="form-control" id="composition_cyrillic" name="composition_cyrillic" 
+                                          rows="3">{{ medicine.composition_cyrillic or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="usage_cyrillic" class="form-label">Usage Instructions</label>
+                                <textarea class="form-control" id="usage_cyrillic" name="usage_cyrillic" 
+                                          rows="3">{{ medicine.usage_cyrillic or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="side_effects_cyrillic" class="form-label">Side Effects</label>
+                                <textarea class="form-control" id="side_effects_cyrillic" name="side_effects_cyrillic" 
+                                          rows="3">{{ medicine.side_effects_cyrillic or '' }}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Voice File ID Section -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h5 class="text-success mb-3">
+                                <i class="fas fa-volume-up"></i> Voice Message
+                            </h5>
+                            
+                            <div class="mb-3">
+                                <label for="voice_file_id" class="form-label">Voice File ID</label>
+                                <input type="text" class="form-control" id="voice_file_id" name="voice_file_id" 
+                                       value="{{ medicine.voice_file_id or '' }}" 
+                                       placeholder="e.g., AwACAgIAAxkBAAI...">
+                                <div class="form-text">
+                                    <i class="fas fa-info-circle"></i> 
+                                    To get voice file ID: Send voice to your private channel, then forward to @userinfobot
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Buttons -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <a href="{{ url_for('medicines_list') }}" class="btn btn-secondary">
+                                    <i class="fas fa-times"></i> Cancel
+                                </a>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> {{ 'Update' if medicine.id else 'Add' }} Medicine
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Help Panel -->
+    <div class="col-lg-4">
+        <div class="card shadow">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">
+                    <i class="fas fa-question-circle"></i> Help
+                </h6>
+            </div>
+            <div class="card-body">
+                <h6>Required Fields</h6>
+                <ul class="list-unstyled">
+                    <li><span class="required">*</span> Medicine Name (both languages)</li>
+                </ul>
+                
+                <h6>Voice Messages</h6>
+                <ol>
+                    <li>Record voice description</li>
+                    <li>Send to your private channel</li>
+                    <li>Forward to @userinfobot</li>
+                    <li>Copy file_id and paste here</li>
+                </ol>
+                
+                <h6>Tips</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-lightbulb text-warning"></i> Keep descriptions concise</li>
+                    <li><i class="fas fa-lightbulb text-warning"></i> Include dosage information</li>
+                    <li><i class="fas fa-lightbulb text-warning"></i> Mention important side effects</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Auto-resize textareas
+document.addEventListener('DOMContentLoaded', function() {
+    var textareas = document.querySelectorAll('textarea');
+    textareas.forEach(function(textarea) {
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    });
+});
+
+// Form validation
+document.querySelector('form').addEventListener('submit', function(e) {
+    var nameLatin = document.getElementById('name_latin').value.trim();
+    var nameCyrillic = document.getElementById('name_cyrillic').value.trim();
+    
+    if (!nameLatin || !nameCyrillic) {
+        e.preventDefault();
+        alert('Please fill in medicine name in both languages.');
+        return false;
+    }
+});
+</script>
+{% endblock %}
