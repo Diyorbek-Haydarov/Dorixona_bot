@@ -324,4 +324,4 @@ if __name__ == '__main__':
     run_async(db.init_db())
     
     # Run Flask app
-    app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=5000)
+    app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=443)
