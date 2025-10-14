@@ -1,0 +1,650 @@
+2025-10-08T20:23:04.063280925Z   Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2025-10-08T20:23:06.354177914Z Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:23:06.357178783Z   Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+2025-10-08T20:23:06.467791196Z Collecting annotated-types>=0.6.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:23:06.471045121Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-10-08T20:23:11.153657486Z Collecting pydantic-core==2.33.2 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:23:11.158120879Z   Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2025-10-08T20:23:11.267191357Z Collecting typing-inspection>=0.4.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:23:11.270426491Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:23:11.454717585Z Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:23:11.458560354Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:23:11.66589606Z Collecting blinker>=1.9.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:23:11.668658263Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-10-08T20:23:11.758376974Z Collecting click>=8.1.3 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:23:11.76123284Z   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:23:11.86346214Z Collecting itsdangerous>=2.2.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:23:11.866438268Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-10-08T20:23:11.959800653Z Collecting jinja2>=3.1.2 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:23:11.963605731Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-10-08T20:23:12.450308225Z Collecting markupsafe>=2.1.1 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:23:12.453786406Z   Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2025-10-08T20:23:12.660962938Z Collecting iniconfig>=1 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:23:12.66411417Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-10-08T20:23:12.762854129Z Collecting packaging>=20 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:23:12.850244087Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:23:12.950099571Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:23:12.953453109Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-10-08T20:23:13.059938177Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:23:13.062784252Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:23:13.191042503Z Collecting mypy-extensions>=0.4.3 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:23:13.250833963Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2025-10-08T20:23:13.351842515Z Collecting pathspec>=0.9.0 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:23:13.355949059Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+2025-10-08T20:23:13.45734091Z Collecting platformdirs>=2 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:23:13.460983734Z   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+2025-10-08T20:23:13.561018773Z Collecting pytokens>=0.1.10 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:23:13.56435686Z   Downloading pytokens-0.1.10-py3-none-any.whl.metadata (2.0 kB)
+2025-10-08T20:23:13.660517929Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:23:13.664641875Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2025-10-08T20:23:13.753960886Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:23:13.757516308Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-10-08T20:23:13.855851458Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:23:13.858903668Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2025-10-08T20:23:14.25711316Z Downloading aiogram-3.22.0-py3-none-any.whl (698 kB)
+2025-10-08T20:23:14.274460071Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 698.2/698.2 kB 31.2 MB/s  0:00:00
+2025-10-08T20:23:14.281217436Z Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+2025-10-08T20:23:14.370089908Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 80.5 MB/s  0:00:00
+2025-10-08T20:23:14.373364313Z Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+2025-10-08T20:23:14.450834322Z Downloading magic_filter-1.0.12-py3-none-any.whl (11 kB)
+2025-10-08T20:23:14.462949391Z Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (254 kB)
+2025-10-08T20:23:14.478342177Z Downloading pydantic-2.11.10-py3-none-any.whl (444 kB)
+2025-10-08T20:23:14.552958969Z Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2025-10-08T20:23:14.64962616Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 76.5 MB/s  0:00:00
+2025-10-08T20:23:14.653763856Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2025-10-08T20:23:14.672834296Z Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (377 kB)
+2025-10-08T20:23:14.694350883Z Downloading aiosqlite-0.21.0-py3-none-any.whl (15 kB)
+2025-10-08T20:23:14.750404906Z Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+2025-10-08T20:23:14.767805988Z Downloading Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+2025-10-08T20:23:14.78047126Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-10-08T20:23:14.795861006Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-10-08T20:23:14.808359964Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2025-10-08T20:23:14.86364243Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-10-08T20:23:14.877172632Z Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2025-10-08T20:23:14.959424701Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 17.5 MB/s  0:00:00
+2025-10-08T20:23:14.963651219Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2025-10-08T20:23:14.976551076Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2025-10-08T20:23:14.988876371Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2025-10-08T20:23:15.060031113Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2025-10-08T20:23:15.071845706Z Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+2025-10-08T20:23:15.084272273Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2025-10-08T20:23:15.094856057Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-10-08T20:23:15.152444876Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+2025-10-08T20:23:15.164654738Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-10-08T20:23:15.177016963Z Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+2025-10-08T20:23:15.286165063Z Downloading click-8.3.0-py3-none-any.whl (107 kB)
+2025-10-08T20:23:15.298361334Z Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (234 kB)
+2025-10-08T20:23:15.316193716Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-10-08T20:23:15.327368624Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-10-08T20:23:15.351929401Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-10-08T20:23:15.363014437Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-10-08T20:23:15.375624657Z Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2025-10-08T20:23:15.387542033Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2025-10-08T20:23:15.39870329Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-10-08T20:23:15.461727415Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+2025-10-08T20:23:15.474968371Z Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+2025-10-08T20:23:15.490467088Z Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (204 kB)
+2025-10-08T20:23:15.549923111Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-10-08T20:23:15.569523273Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 58.2 MB/s  0:00:00
+2025-10-08T20:23:15.580788083Z Downloading pytokens-0.1.10-py3-none-any.whl (12 kB)
+2025-10-08T20:23:15.651952186Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2025-10-08T20:23:16.459202269Z Installing collected packages: typing-extensions, pytokens, python-dotenv, pygments, pyflakes, pycodestyle, propcache, pluggy, platformdirs, pathspec, packaging, mypy-extensions, multidict, mccabe, markupsafe, magic-filter, itsdangerous, iniconfig, idna, frozenlist, click, certifi, blinker, attrs, annotated-types, aiohappyeyeballs, aiofiles, yarl, Werkzeug, typing-inspection, pytest, pydantic-core, jinja2, flake8, black, aiosqlite, aiosignal, pydantic, Flask, aiohttp, Flask-Login, aiogram
+2025-10-08T20:23:43.453377359Z 
+2025-10-08T20:23:43.45907652Z Successfully installed Flask-3.1.2 Flask-Login-0.6.3 Werkzeug-3.1.3 aiofiles-24.1.0 aiogram-3.22.0 aiohappyeyeballs-2.6.1 aiohttp-3.12.15 aiosignal-1.4.0 aiosqlite-0.21.0 annotated-types-0.7.0 attrs-25.4.0 black-25.9.0 blinker-1.9.0 certifi-2025.10.5 click-8.3.0 flake8-7.3.0 frozenlist-1.8.0 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 jinja2-3.1.6 magic-filter-1.0.12 markupsafe-3.0.3 mccabe-0.7.0 multidict-6.7.0 mypy-extensions-1.1.0 packaging-25.0 pathspec-0.12.1 platformdirs-4.5.0 pluggy-1.6.0 propcache-0.4.1 pycodestyle-2.14.0 pydantic-2.11.10 pydantic-core-2.33.2 pyflakes-3.4.0 pygments-2.19.2 pytest-8.4.2 python-dotenv-1.1.1 pytokens-0.1.10 typing-extensions-4.15.0 typing-inspection-0.4.2 yarl-1.22.0
+2025-10-08T20:23:47.266259848Z [SUCCESS] All packages installed
+2025-10-08T20:23:47.349649322Z [INFO] Setting up environment configuration...
+2025-10-08T20:23:47.352045328Z [SUCCESS] .env file created from template
+2025-10-08T20:23:47.352092279Z [WARNING] Please edit .env file with your bot token and other settings
+2025-10-08T20:23:47.352106259Z [INFO] Initializing database...
+2025-10-08T20:23:48.095643771Z Database initialized successfully
+2025-10-08T20:23:48.156408684Z [SUCCESS] Database initialized
+2025-10-08T20:23:48.156436654Z [INFO] Creating admin user...
+2025-10-08T20:23:48.760556839Z 🔐 PharmaGuide Bot - Admin User Setup
+2025-10-08T20:23:48.760580729Z =====================================
+2025-10-08T20:23:48.760586789Z 
+2025-10-08T20:23:48.76059306Z ✅ Database initialized
+2025-10-08T20:23:48.76059946Z Enter admin credentials:
+2025-10-08T20:23:48.761673574Z Traceback (most recent call last):
+2025-10-08T20:23:48.762410962Z   File "/opt/render/project/src/init_admin.py", line 48, in <module>
+2025-10-08T20:23:48.762441772Z     asyncio.run(create_admin_user())
+2025-10-08T20:23:48.762446602Z     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+2025-10-08T20:23:48.762450712Z   File "/opt/render/project/python/Python-3.13.4/lib/python3.13/asyncio/runners.py", line 195, in run
+2025-10-08T20:23:48.762456003Z     return runner.run(main)
+2025-10-08T20:23:48.762459203Z            ~~~~~~~~~~^^^^^^
+2025-10-08T20:23:48.762462673Z   File "/opt/render/project/python/Python-3.13.4/lib/python3.13/asyncio/runners.py", line 118, in run
+2025-10-08T20:23:48.762466123Z     return self._loop.run_until_complete(task)
+2025-10-08T20:23:48.762469363Z            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+2025-10-08T20:23:48.762472023Z   File "/opt/render/project/python/Python-3.13.4/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+2025-10-08T20:23:48.762474093Z     return future.result()
+2025-10-08T20:23:48.762476583Z            ~~~~~~~~~~~~~^^
+2025-10-08T20:23:48.762478873Z   File "/opt/render/project/src/init_admin.py", line 29, in create_admin_user
+2025-10-08T20:23:48.762480983Z     username = input(f"Username [{ADMIN_USERNAME}]: ").strip() or ADMIN_USERNAME
+2025-10-08T20:23:48.762483643Z                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-08T20:23:48.762498593Z EOFError: EOF when reading a line
+2025-10-08T20:23:48.952396587Z Username [manzum]: 
+2025-10-08T20:23:51.265792785Z ==> Exited with status 1
+2025-10-08T20:23:51.410366041Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-10-08T20:23:55.414889543Z ==> Running './run_bot.py | ./run_admin.py | ./setup.sh'
+2025-10-08T20:23:55.420404671Z bash: line 1: ./run_admin.py: Permission denied
+2025-10-08T20:23:55.511098014Z bash: line 1: ./run_bot.py: Permission denied
+2025-10-08T20:23:55.51309579Z 🚀 PharmaGuide Bot Setup Script
+2025-10-08T20:23:55.51311287Z ================================
+2025-10-08T20:23:55.513166582Z [INFO] Checking Python version...
+2025-10-08T20:23:55.612347241Z [SUCCESS] Python 3.13 found
+2025-10-08T20:23:55.612375642Z [INFO] Checking pip...
+2025-10-08T20:23:55.612499604Z [SUCCESS] pip3 found
+2025-10-08T20:23:55.612504105Z [INFO] Creating virtual environment...
+2025-10-08T20:24:15.919815505Z [SUCCESS] Virtual environment created
+2025-10-08T20:24:15.919834585Z [INFO] Activating virtual environment...
+2025-10-08T20:24:15.921912103Z [SUCCESS] Virtual environment activated
+2025-10-08T20:24:15.921928494Z [INFO] Upgrading pip...
+2025-10-08T20:24:19.215862873Z Requirement already satisfied: pip in ./venv/lib/python3.13/site-packages (25.1.1)
+2025-10-08T20:24:19.617217437Z Collecting pip
+2025-10-08T20:24:19.824899511Z   Downloading pip-25.2-py3-none-any.whl.metadata (4.7 kB)
+2025-10-08T20:24:19.840726036Z Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+2025-10-08T20:24:20.015184594Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 51.8 MB/s eta 0:00:00
+2025-10-08T20:24:20.11771837Z Installing collected packages: pip
+2025-10-08T20:24:20.117895974Z   Attempting uninstall: pip
+2025-10-08T20:24:20.120687338Z     Found existing installation: pip 25.1.1
+2025-10-08T20:24:20.422479844Z     Uninstalling pip-25.1.1:
+2025-10-08T20:24:20.516673029Z       Successfully uninstalled pip-25.1.1
+2025-10-08T20:24:28.026618621Z Successfully installed pip-25.2
+2025-10-08T20:24:28.911469995Z [SUCCESS] pip upgraded
+2025-10-08T20:24:28.911495466Z [INFO] Installing Python packages...
+2025-10-08T20:24:32.312762573Z Collecting aiogram>=3.0.0 (from -r requirements.txt (line 2))
+2025-10-08T20:24:32.443770987Z   Downloading aiogram-3.22.0-py3-none-any.whl.metadata (7.7 kB)
+2025-10-08T20:24:36.021012176Z Collecting aiohttp>=3.8.0 (from -r requirements.txt (line 3))
+2025-10-08T20:24:36.026118974Z   Downloading aiohttp-3.13.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+2025-10-08T20:24:36.129731875Z Collecting aiosqlite>=0.19.0 (from -r requirements.txt (line 4))
+2025-10-08T20:24:36.1329704Z   Downloading aiosqlite-0.21.0-py3-none-any.whl.metadata (4.3 kB)
+2025-10-08T20:24:36.233206443Z Collecting Flask>=2.3.0 (from -r requirements.txt (line 7))
+2025-10-08T20:24:36.23563898Z   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+2025-10-08T20:24:36.334590474Z Collecting Flask-Login>=0.6.0 (from -r requirements.txt (line 8))
+2025-10-08T20:24:36.33833638Z   Downloading Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+2025-10-08T20:24:36.431291496Z Collecting Werkzeug>=2.3.0 (from -r requirements.txt (line 9))
+2025-10-08T20:24:36.511899996Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-10-08T20:24:36.542037202Z Collecting python-dotenv>=1.0.0 (from -r requirements.txt (line 12))
+2025-10-08T20:24:36.613950262Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-10-08T20:24:36.816950188Z Collecting pytest>=7.0.0 (from -r requirements.txt (line 15))
+2025-10-08T20:24:36.821086333Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+2025-10-08T20:24:37.119847439Z Collecting black>=23.0.0 (from -r requirements.txt (line 16))
+2025-10-08T20:24:37.124863335Z   Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (83 kB)
+2025-10-08T20:24:37.319159529Z Collecting flake8>=6.0.0 (from -r requirements.txt (line 17))
+2025-10-08T20:24:37.323631583Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2025-10-08T20:24:37.42230094Z Collecting aiofiles<24.2,>=23.2.1 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:37.428651027Z   Downloading aiofiles-24.1.0-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:24:37.523748731Z Collecting aiohttp>=3.8.0 (from -r requirements.txt (line 3))
+2025-10-08T20:24:37.527919048Z   Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+2025-10-08T20:24:37.711799292Z Collecting certifi>=2023.7.22 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:37.71473429Z   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:24:37.740200927Z Collecting magic-filter<1.1,>=1.0.12 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:37.743945564Z   Downloading magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+2025-10-08T20:24:38.516188539Z Collecting pydantic<2.12,>=2.4.1 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:38.520231782Z   Downloading pydantic-2.11.10-py3-none-any.whl.metadata (68 kB)
+2025-10-08T20:24:38.631588142Z Collecting typing-extensions<=5.0,>=4.7.0 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:38.713964704Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:24:38.814811061Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:38.817718258Z   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+2025-10-08T20:24:38.842301736Z Collecting aiosignal>=1.4.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:38.911197326Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+2025-10-08T20:24:38.940456591Z Collecting attrs>=17.3.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:39.013728283Z   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:24:39.517662704Z Collecting frozenlist>=1.1.1 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:39.5231279Z   Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+2025-10-08T20:24:41.214955071Z Collecting multidict<7.0,>=4.5 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:41.21882138Z   Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2025-10-08T20:24:41.611916053Z Collecting propcache>=0.2.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:41.616413967Z   Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2025-10-08T20:24:43.815300271Z Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:43.822294312Z   Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+2025-10-08T20:24:43.933655033Z Collecting annotated-types>=0.6.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:44.012522953Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-10-08T20:24:48.719231522Z Collecting pydantic-core==2.33.2 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:48.726678624Z   Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2025-10-08T20:24:48.911389687Z Collecting typing-inspection>=0.4.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:24:48.914652223Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:24:49.021323525Z Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:24:49.024185111Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:24:49.313033908Z Collecting blinker>=1.9.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:24:49.316203001Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-10-08T20:24:49.419180318Z Collecting click>=8.1.3 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:24:49.422448163Z   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:24:49.522955263Z Collecting itsdangerous>=2.2.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:24:49.525683086Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-10-08T20:24:49.615409557Z Collecting jinja2>=3.1.2 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:24:49.618508159Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-10-08T20:24:49.92399317Z Collecting markupsafe>=2.1.1 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:24:50.012139464Z   Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2025-10-08T20:24:50.130430285Z Collecting iniconfig>=1 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:24:50.139891023Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-10-08T20:24:50.232381938Z Collecting packaging>=20 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:24:50.235640753Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:24:50.337273679Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:24:50.339988632Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-10-08T20:24:50.435797973Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:24:50.515516743Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:24:50.625113313Z Collecting mypy-extensions>=0.4.3 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:24:50.628240965Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2025-10-08T20:24:50.723886703Z Collecting pathspec>=0.9.0 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:24:50.726923973Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+2025-10-08T20:24:50.825185821Z Collecting platformdirs>=2 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:24:50.828345074Z   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+2025-10-08T20:24:50.930021211Z Collecting pytokens>=0.1.10 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:24:50.933643794Z   Downloading pytokens-0.1.10-py3-none-any.whl.metadata (2.0 kB)
+2025-10-08T20:24:51.027635024Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:24:51.033465358Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2025-10-08T20:24:51.125979604Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:24:51.128501632Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-10-08T20:24:51.216517714Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:24:51.219164835Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2025-10-08T20:24:51.51746981Z Downloading aiogram-3.22.0-py3-none-any.whl (698 kB)
+2025-10-08T20:24:51.539437627Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 698.2/698.2 kB 25.8 MB/s  0:00:00
+2025-10-08T20:24:51.545450086Z Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+2025-10-08T20:24:51.632521996Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 17.4 MB/s  0:00:00
+2025-10-08T20:24:51.712685846Z Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+2025-10-08T20:24:51.727277513Z Downloading magic_filter-1.0.12-py3-none-any.whl (11 kB)
+2025-10-08T20:24:51.738269037Z Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (254 kB)
+2025-10-08T20:24:51.751452111Z Downloading pydantic-2.11.10-py3-none-any.whl (444 kB)
+2025-10-08T20:24:51.825031879Z Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2025-10-08T20:24:51.913816838Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 20.6 MB/s  0:00:00
+2025-10-08T20:24:51.916803927Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2025-10-08T20:24:51.928926077Z Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (377 kB)
+2025-10-08T20:24:51.945755455Z Downloading aiosqlite-0.21.0-py3-none-any.whl (15 kB)
+2025-10-08T20:24:52.014018081Z Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+2025-10-08T20:24:52.026158841Z Downloading Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+2025-10-08T20:24:52.037531194Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-10-08T20:24:52.051129638Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-10-08T20:24:52.112211297Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2025-10-08T20:24:52.12792019Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-10-08T20:24:52.145315692Z Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2025-10-08T20:24:52.227480538Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 17.8 MB/s  0:00:00
+2025-10-08T20:24:52.230746864Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2025-10-08T20:24:52.242980926Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2025-10-08T20:24:52.3111707Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2025-10-08T20:24:52.323327861Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2025-10-08T20:24:52.33501188Z Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+2025-10-08T20:24:52.345968563Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2025-10-08T20:24:52.356608839Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-10-08T20:24:52.417976465Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+2025-10-08T20:24:52.429821868Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-10-08T20:24:52.440934345Z Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+2025-10-08T20:24:52.453408793Z Downloading click-8.3.0-py3-none-any.whl (107 kB)
+2025-10-08T20:24:52.515274541Z Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (234 kB)
+2025-10-08T20:24:52.529654063Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-10-08T20:24:52.541115517Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-10-08T20:24:52.551887046Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-10-08T20:24:52.622474145Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-10-08T20:24:52.645740752Z Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2025-10-08T20:24:52.656820988Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2025-10-08T20:24:52.667842982Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-10-08T20:24:52.679142463Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+2025-10-08T20:24:52.722962715Z Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+2025-10-08T20:24:52.737574942Z Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (204 kB)
+2025-10-08T20:24:52.751528074Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-10-08T20:24:52.829139756Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 62.1 MB/s  0:00:00
+2025-10-08T20:24:52.832525824Z Downloading pytokens-0.1.10-py3-none-any.whl (12 kB)
+2025-10-08T20:24:52.845044412Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2025-10-08T20:24:53.625260581Z Installing collected packages: typing-extensions, pytokens, python-dotenv, pygments, pyflakes, pycodestyle, propcache, pluggy, platformdirs, pathspec, packaging, mypy-extensions, multidict, mccabe, markupsafe, magic-filter, itsdangerous, iniconfig, idna, frozenlist, click, certifi, blinker, attrs, annotated-types, aiohappyeyeballs, aiofiles, yarl, Werkzeug, typing-inspection, pytest, pydantic-core, jinja2, flake8, black, aiosqlite, aiosignal, pydantic, Flask, aiohttp, Flask-Login, aiogram
+2025-10-08T20:25:12.627491527Z Deploy cancelled
+2025-10-08T20:30:09.134051514Z ==> Deploying...
+2025-10-08T20:31:01.570643972Z ==> Running './run_bot.py | ./run_admin.py | ./setup.sh'
+2025-10-08T20:31:01.576925054Z bash: line 1: ./run_bot.py: Permission denied
+2025-10-08T20:31:01.576940905Z bash: line 1: ./run_admin.py: Permission denied
+2025-10-08T20:31:01.578474497Z 🚀 PharmaGuide Bot Setup Script
+2025-10-08T20:31:01.578485677Z ================================
+2025-10-08T20:31:01.578539918Z [INFO] Checking Python version...
+2025-10-08T20:31:01.676068712Z [SUCCESS] Python 3.13 found
+2025-10-08T20:31:01.676085242Z [INFO] Checking pip...
+2025-10-08T20:31:01.676211414Z [SUCCESS] pip3 found
+2025-10-08T20:31:01.676216964Z [INFO] Creating virtual environment...
+2025-10-08T20:31:21.67207226Z [SUCCESS] Virtual environment created
+2025-10-08T20:31:21.672099251Z [INFO] Activating virtual environment...
+2025-10-08T20:31:21.674374334Z [SUCCESS] Virtual environment activated
+2025-10-08T20:31:21.674387704Z [INFO] Upgrading pip...
+2025-10-08T20:31:24.97499125Z Requirement already satisfied: pip in ./venv/lib/python3.13/site-packages (25.1.1)
+2025-10-08T20:31:25.4710839Z Collecting pip
+2025-10-08T20:31:25.673567576Z   Downloading pip-25.2-py3-none-any.whl.metadata (4.7 kB)
+2025-10-08T20:31:25.683476852Z Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+2025-10-08T20:31:25.803722962Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 86.0 MB/s eta 0:00:00
+2025-10-08T20:31:25.87657529Z Installing collected packages: pip
+2025-10-08T20:31:25.876719982Z   Attempting uninstall: pip
+2025-10-08T20:31:25.96445851Z     Found existing installation: pip 25.1.1
+2025-10-08T20:31:26.275656705Z     Uninstalling pip-25.1.1:
+2025-10-08T20:31:26.369784497Z       Successfully uninstalled pip-25.1.1
+2025-10-08T20:31:33.671112477Z Successfully installed pip-25.2
+2025-10-08T20:31:34.576800768Z [SUCCESS] pip upgraded
+2025-10-08T20:31:34.576831288Z [INFO] Installing Python packages...
+2025-10-08T20:31:35.637859921Z ==> No open ports detected, continuing to scan...
+2025-10-08T20:31:36.015813602Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-08T20:31:38.57538476Z Collecting aiogram>=3.0.0 (from -r requirements.txt (line 2))
+2025-10-08T20:31:38.871815977Z   Downloading aiogram-3.22.0-py3-none-any.whl.metadata (7.7 kB)
+2025-10-08T20:31:42.678696392Z Collecting aiohttp>=3.8.0 (from -r requirements.txt (line 3))
+2025-10-08T20:31:42.770025694Z   Downloading aiohttp-3.13.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+2025-10-08T20:31:42.793095495Z Collecting aiosqlite>=0.19.0 (from -r requirements.txt (line 4))
+2025-10-08T20:31:42.796493375Z   Downloading aiosqlite-0.21.0-py3-none-any.whl.metadata (4.3 kB)
+2025-10-08T20:31:42.969485945Z Collecting Flask>=2.3.0 (from -r requirements.txt (line 7))
+2025-10-08T20:31:42.969502985Z   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+2025-10-08T20:31:42.991800915Z Collecting Flask-Login>=0.6.0 (from -r requirements.txt (line 8))
+2025-10-08T20:31:42.995259426Z   Downloading Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+2025-10-08T20:31:43.170112273Z Collecting Werkzeug>=2.3.0 (from -r requirements.txt (line 9))
+2025-10-08T20:31:43.174032461Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-10-08T20:31:43.281220487Z Collecting python-dotenv>=1.0.0 (from -r requirements.txt (line 12))
+2025-10-08T20:31:43.368346746Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-10-08T20:31:43.576239012Z Collecting pytest>=7.0.0 (from -r requirements.txt (line 15))
+2025-10-08T20:31:43.57944387Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+2025-10-08T20:31:43.968366354Z Collecting black>=23.0.0 (from -r requirements.txt (line 16))
+2025-10-08T20:31:43.973734693Z   Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (83 kB)
+2025-10-08T20:31:44.172615046Z Collecting flake8>=6.0.0 (from -r requirements.txt (line 17))
+2025-10-08T20:31:44.175940395Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2025-10-08T20:31:44.279438797Z Collecting aiofiles<24.2,>=23.2.1 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:44.283347005Z   Downloading aiofiles-24.1.0-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:31:44.466812259Z Collecting aiohttp>=3.8.0 (from -r requirements.txt (line 3))
+2025-10-08T20:31:44.470668316Z   Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+2025-10-08T20:31:44.569656061Z Collecting certifi>=2023.7.22 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:44.572712226Z   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:31:44.668481493Z Collecting magic-filter<1.1,>=1.0.12 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:44.674783006Z   Downloading magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+2025-10-08T20:31:45.578762081Z Collecting pydantic<2.12,>=2.4.1 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:45.666601901Z   Downloading pydantic-2.11.10-py3-none-any.whl.metadata (68 kB)
+2025-10-08T20:31:45.772421927Z Collecting typing-extensions<=5.0,>=4.7.0 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:45.775518463Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:31:45.880682389Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:45.965088617Z   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+2025-10-08T20:31:45.981134505Z Collecting aiosignal>=1.4.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:45.983590991Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+2025-10-08T20:31:46.081946737Z Collecting attrs>=17.3.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:46.084388813Z   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:31:46.664526506Z Collecting frozenlist>=1.1.1 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:46.678416872Z   Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+2025-10-08T20:31:48.273542503Z Collecting multidict<7.0,>=4.5 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:48.27870722Z   Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2025-10-08T20:31:48.666607559Z Collecting propcache>=0.2.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:48.673783755Z   Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2025-10-08T20:31:50.976285563Z Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:51.070348525Z   Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+2025-10-08T20:31:51.579360436Z Collecting annotated-types>=0.6.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:51.582031296Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-10-08T20:31:56.575049052Z Collecting pydantic-core==2.33.2 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:56.57965076Z   Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2025-10-08T20:31:56.787310713Z Collecting typing-inspection>=0.4.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:31:56.789928832Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:31:57.023278674Z Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:31:57.026008545Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:31:57.285026637Z Collecting blinker>=1.9.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:31:57.289587185Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-10-08T20:31:57.552941191Z Collecting click>=8.1.3 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:31:57.556021497Z   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:31:57.754722487Z Collecting itsdangerous>=2.2.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:31:57.757586499Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-10-08T20:31:58.028197033Z Collecting jinja2>=3.1.2 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:31:58.030821942Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-10-08T20:31:58.375306189Z Collecting markupsafe>=2.1.1 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:31:58.379406639Z   Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2025-10-08T20:31:58.695335814Z Collecting iniconfig>=1 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:31:58.699220191Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-10-08T20:31:59.024364532Z Collecting packaging>=20 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:31:59.028352311Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:31:59.221828224Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:31:59.225356256Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-10-08T20:31:59.49999693Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:31:59.569275065Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:31:59.670054256Z Collecting mypy-extensions>=0.4.3 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:31:59.67171502Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2025-10-08T20:31:59.768885048Z Collecting pathspec>=0.9.0 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:31:59.772192737Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+2025-10-08T20:31:59.96565834Z Collecting platformdirs>=2 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:31:59.96838429Z   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+2025-10-08T20:31:59.988720141Z Collecting pytokens>=0.1.10 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:32:00.064910578Z   Downloading pytokens-0.1.10-py3-none-any.whl.metadata (2.0 kB)
+2025-10-08T20:32:00.085617304Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:32:00.164802556Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2025-10-08T20:32:00.184204913Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:32:00.187757216Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-10-08T20:32:00.284441826Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:32:00.287153677Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2025-10-08T20:32:00.671736627Z Downloading aiogram-3.22.0-py3-none-any.whl (698 kB)
+2025-10-08T20:32:00.684398824Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 698.2/698.2 kB 48.0 MB/s  0:00:00
+2025-10-08T20:32:00.689006092Z Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+2025-10-08T20:32:00.783008693Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 83.8 MB/s  0:00:00
+2025-10-08T20:32:00.786215701Z Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+2025-10-08T20:32:00.874428176Z Downloading magic_filter-1.0.12-py3-none-any.whl (11 kB)
+2025-10-08T20:32:00.890384312Z Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (254 kB)
+2025-10-08T20:32:00.964196774Z Downloading pydantic-2.11.10-py3-none-any.whl (444 kB)
+2025-10-08T20:32:00.978316873Z Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2025-10-08T20:32:01.076528366Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 18.3 MB/s  0:00:00
+2025-10-08T20:32:01.079631592Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2025-10-08T20:32:01.087459088Z Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (377 kB)
+2025-10-08T20:32:01.104266596Z Downloading aiosqlite-0.21.0-py3-none-any.whl (15 kB)
+2025-10-08T20:32:01.179044283Z Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+2025-10-08T20:32:01.191926024Z Downloading Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+2025-10-08T20:32:01.270992363Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-10-08T20:32:01.279181084Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-10-08T20:32:01.286026026Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2025-10-08T20:32:01.294947088Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-10-08T20:32:01.371334728Z Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2025-10-08T20:32:01.392103455Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 83.8 MB/s  0:00:00
+2025-10-08T20:32:01.46609351Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2025-10-08T20:32:01.47351052Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2025-10-08T20:32:01.481013651Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2025-10-08T20:32:01.488921478Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2025-10-08T20:32:01.572295252Z Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+2025-10-08T20:32:01.580138988Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2025-10-08T20:32:01.587200072Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-10-08T20:32:01.663876167Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+2025-10-08T20:32:01.671731013Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-10-08T20:32:01.678558704Z Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+2025-10-08T20:32:01.686502221Z Downloading click-8.3.0-py3-none-any.whl (107 kB)
+2025-10-08T20:32:01.695635256Z Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (234 kB)
+2025-10-08T20:32:01.772110868Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-10-08T20:32:01.779382105Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-10-08T20:32:01.785676799Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-10-08T20:32:01.79253145Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-10-08T20:32:01.86484143Z Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2025-10-08T20:32:01.876529433Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2025-10-08T20:32:01.884004713Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-10-08T20:32:01.892040592Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+2025-10-08T20:32:01.964798549Z Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+2025-10-08T20:32:01.976905428Z Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (204 kB)
+2025-10-08T20:32:01.986935496Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-10-08T20:32:02.065456458Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 12.8 MB/s  0:00:00
+2025-10-08T20:32:02.070042136Z Downloading pytokens-0.1.10-py3-none-any.whl (12 kB)
+2025-10-08T20:32:02.203074164Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2025-10-08T20:32:03.076052371Z Installing collected packages: typing-extensions, pytokens, python-dotenv, pygments, pyflakes, pycodestyle, propcache, pluggy, platformdirs, pathspec, packaging, mypy-extensions, multidict, mccabe, markupsafe, magic-filter, itsdangerous, iniconfig, idna, frozenlist, click, certifi, blinker, attrs, annotated-types, aiohappyeyeballs, aiofiles, yarl, Werkzeug, typing-inspection, pytest, pydantic-core, jinja2, flake8, black, aiosqlite, aiosignal, pydantic, Flask, aiohttp, Flask-Login, aiogram
+2025-10-08T20:32:31.657888609Z 
+2025-10-08T20:32:31.666342394Z Successfully installed Flask-3.1.2 Flask-Login-0.6.3 Werkzeug-3.1.3 aiofiles-24.1.0 aiogram-3.22.0 aiohappyeyeballs-2.6.1 aiohttp-3.12.15 aiosignal-1.4.0 aiosqlite-0.21.0 annotated-types-0.7.0 attrs-25.4.0 black-25.9.0 blinker-1.9.0 certifi-2025.10.5 click-8.3.0 flake8-7.3.0 frozenlist-1.8.0 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 jinja2-3.1.6 magic-filter-1.0.12 markupsafe-3.0.3 mccabe-0.7.0 multidict-6.7.0 mypy-extensions-1.1.0 packaging-25.0 pathspec-0.12.1 platformdirs-4.5.0 pluggy-1.6.0 propcache-0.4.1 pycodestyle-2.14.0 pydantic-2.11.10 pydantic-core-2.33.2 pyflakes-3.4.0 pygments-2.19.2 pytest-8.4.2 python-dotenv-1.1.1 pytokens-0.1.10 typing-extensions-4.15.0 typing-inspection-0.4.2 yarl-1.22.0
+2025-10-08T20:32:35.566105965Z [SUCCESS] All packages installed
+2025-10-08T20:32:35.566126246Z [INFO] Setting up environment configuration...
+2025-10-08T20:32:35.569280652Z [SUCCESS] .env file created from template
+2025-10-08T20:32:35.569294273Z [WARNING] Please edit .env file with your bot token and other settings
+2025-10-08T20:32:35.569384344Z [INFO] Initializing database...
+2025-10-08T20:32:36.479566641Z Database initialized successfully
+2025-10-08T20:32:36.568560928Z [SUCCESS] Database initialized
+2025-10-08T20:32:36.568620429Z [INFO] Creating admin user...
+2025-10-08T20:32:37.266642316Z 🔐 PharmaGuide Bot - Admin User Setup
+2025-10-08T20:32:37.266659947Z =====================================
+2025-10-08T20:32:37.266663827Z 
+2025-10-08T20:32:37.266668317Z ✅ Database initialized
+2025-10-08T20:32:37.266672447Z Enter admin credentials:
+2025-10-08T20:32:37.27769498Z Traceback (most recent call last):
+2025-10-08T20:32:37.278541403Z   File "/opt/render/project/src/init_admin.py", line 48, in <module>
+2025-10-08T20:32:37.278565293Z     asyncio.run(create_admin_user())
+2025-10-08T20:32:37.278568643Z     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+2025-10-08T20:32:37.278572753Z   File "/opt/render/project/python/Python-3.13.4/lib/python3.13/asyncio/runners.py", line 195, in run
+2025-10-08T20:32:37.278579723Z     return runner.run(main)
+2025-10-08T20:32:37.278582423Z            ~~~~~~~~~~^^^^^^
+2025-10-08T20:32:37.278585553Z   File "/opt/render/project/python/Python-3.13.4/lib/python3.13/asyncio/runners.py", line 118, in run
+2025-10-08T20:32:37.278588443Z     return self._loop.run_until_complete(task)
+2025-10-08T20:32:37.278591043Z            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+2025-10-08T20:32:37.278594133Z   File "/opt/render/project/python/Python-3.13.4/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+2025-10-08T20:32:37.278596824Z     return future.result()
+2025-10-08T20:32:37.278599273Z            ~~~~~~~~~~~~~^^
+2025-10-08T20:32:37.278601984Z   File "/opt/render/project/src/init_admin.py", line 29, in create_admin_user
+2025-10-08T20:32:37.278604453Z     username = input(f"Username [{ADMIN_USERNAME}]: ").strip() or ADMIN_USERNAME
+2025-10-08T20:32:37.278608834Z                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-08T20:32:37.278611804Z EOFError: EOF when reading a line
+2025-10-08T20:32:37.373697931Z Username [manzum]: 
+2025-10-08T20:32:39.314108687Z ==> No open ports detected, continuing to scan...
+2025-10-08T20:32:40.027788325Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-08T20:32:51.1868457Z ==> Exited with status 1
+2025-10-08T20:32:51.334594736Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-10-08T20:32:58.576304596Z ==> Running './run_bot.py | ./run_admin.py | ./setup.sh'
+2025-10-08T20:32:58.583027055Z bash: line 1: ./run_bot.py: Permission denied
+2025-10-08T20:32:58.583037815Z bash: line 1: ./run_admin.py: Permission denied
+2025-10-08T20:32:58.583709096Z 🚀 PharmaGuide Bot Setup Script
+2025-10-08T20:32:58.583716425Z ================================
+2025-10-08T20:32:58.583731166Z [INFO] Checking Python version...
+2025-10-08T20:32:58.770193475Z [SUCCESS] Python 3.13 found
+2025-10-08T20:32:58.770209055Z [INFO] Checking pip...
+2025-10-08T20:32:58.770349787Z [SUCCESS] pip3 found
+2025-10-08T20:32:58.770365397Z [INFO] Creating virtual environment...
+2025-10-08T20:33:19.572216254Z [SUCCESS] Virtual environment created
+2025-10-08T20:33:19.572843144Z [INFO] Activating virtual environment...
+2025-10-08T20:33:19.574996326Z [SUCCESS] Virtual environment activated
+2025-10-08T20:33:19.575008776Z [INFO] Upgrading pip...
+2025-10-08T20:33:22.87820715Z Requirement already satisfied: pip in ./venv/lib/python3.13/site-packages (25.1.1)
+2025-10-08T20:33:23.374891599Z Collecting pip
+2025-10-08T20:33:23.577943574Z   Downloading pip-25.2-py3-none-any.whl.metadata (4.7 kB)
+2025-10-08T20:33:23.591304692Z Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+2025-10-08T20:33:23.713429049Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 74.7 MB/s eta 0:00:00
+2025-10-08T20:33:23.872926159Z Installing collected packages: pip
+2025-10-08T20:33:23.873128071Z   Attempting uninstall: pip
+2025-10-08T20:33:23.875942153Z     Found existing installation: pip 25.1.1
+2025-10-08T20:33:24.176828335Z     Uninstalling pip-25.1.1:
+2025-10-08T20:33:24.271021829Z       Successfully uninstalled pip-25.1.1
+2025-10-08T20:33:31.583566607Z Successfully installed pip-25.2
+2025-10-08T20:33:32.569696888Z [SUCCESS] pip upgraded
+2025-10-08T20:33:32.569715128Z [INFO] Installing Python packages...
+2025-10-08T20:33:36.273069374Z Collecting aiogram>=3.0.0 (from -r requirements.txt (line 2))
+2025-10-08T20:33:36.474950971Z   Downloading aiogram-3.22.0-py3-none-any.whl.metadata (7.7 kB)
+2025-10-08T20:33:40.174070424Z Collecting aiohttp>=3.8.0 (from -r requirements.txt (line 3))
+2025-10-08T20:33:40.180010722Z   Downloading aiohttp-3.13.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+2025-10-08T20:33:40.271302882Z Collecting aiosqlite>=0.19.0 (from -r requirements.txt (line 4))
+2025-10-08T20:33:40.273916731Z   Downloading aiosqlite-0.21.0-py3-none-any.whl.metadata (4.3 kB)
+2025-10-08T20:33:40.37862702Z Collecting Flask>=2.3.0 (from -r requirements.txt (line 7))
+2025-10-08T20:33:40.381704266Z   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+2025-10-08T20:33:40.479746006Z Collecting Flask-Login>=0.6.0 (from -r requirements.txt (line 8))
+2025-10-08T20:33:40.482213453Z   Downloading Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+2025-10-08T20:33:40.581830857Z Collecting Werkzeug>=2.3.0 (from -r requirements.txt (line 9))
+2025-10-08T20:33:40.584527217Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-10-08T20:33:40.689607252Z Collecting python-dotenv>=1.0.0 (from -r requirements.txt (line 12))
+2025-10-08T20:33:40.770014091Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-10-08T20:33:40.980442995Z Collecting pytest>=7.0.0 (from -r requirements.txt (line 15))
+2025-10-08T20:33:40.983319528Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+2025-10-08T20:33:41.374724369Z Collecting black>=23.0.0 (from -r requirements.txt (line 16))
+2025-10-08T20:33:41.377981997Z   Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (83 kB)
+2025-10-08T20:33:41.574503065Z Collecting flake8>=6.0.0 (from -r requirements.txt (line 17))
+2025-10-08T20:33:41.577881085Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2025-10-08T20:33:41.593857471Z Collecting aiofiles<24.2,>=23.2.1 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:41.672990932Z   Downloading aiofiles-24.1.0-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:33:41.779230854Z Collecting aiohttp>=3.8.0 (from -r requirements.txt (line 3))
+2025-10-08T20:33:41.784812756Z   Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+2025-10-08T20:33:41.887735119Z Collecting certifi>=2023.7.22 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:41.969834984Z   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:33:41.989239911Z Collecting magic-filter<1.1,>=1.0.12 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:41.992479799Z   Downloading magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+2025-10-08T20:33:42.781037657Z Collecting pydantic<2.12,>=2.4.1 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:42.784568269Z   Downloading pydantic-2.11.10-py3-none-any.whl.metadata (68 kB)
+2025-10-08T20:33:42.970020263Z Collecting typing-extensions<=5.0,>=4.7.0 (from aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:42.973246411Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:33:43.074623481Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:43.077693336Z   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+2025-10-08T20:33:43.169909681Z Collecting aiosignal>=1.4.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:43.173352462Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+2025-10-08T20:33:43.271346372Z Collecting attrs>=17.3.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:43.274398717Z   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:33:43.772382855Z Collecting frozenlist>=1.1.1 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:43.77609586Z   Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+2025-10-08T20:33:45.677458423Z Collecting multidict<7.0,>=4.5 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:45.680240794Z   Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2025-10-08T20:33:46.074772342Z Collecting propcache>=0.2.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:46.079594203Z   Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2025-10-08T20:33:48.578983085Z Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:48.583013144Z   Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+2025-10-08T20:33:48.771399902Z Collecting annotated-types>=0.6.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:48.7753553Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-10-08T20:33:53.879162767Z Collecting pydantic-core==2.33.2 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:53.887144285Z   Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2025-10-08T20:33:53.984436395Z Collecting typing-inspection>=0.4.0 (from pydantic<2.12,>=2.4.1->aiogram>=3.0.0->-r requirements.txt (line 2))
+2025-10-08T20:33:53.986957213Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:33:54.086859951Z Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp>=3.8.0->-r requirements.txt (line 3))
+2025-10-08T20:33:54.089779924Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-10-08T20:33:54.284505695Z Collecting blinker>=1.9.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:33:54.287683902Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-10-08T20:33:54.387026052Z Collecting click>=8.1.3 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:33:54.470823032Z   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+2025-10-08T20:33:54.486396692Z Collecting itsdangerous>=2.2.0 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:33:54.489117552Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-10-08T20:33:54.58291271Z Collecting jinja2>=3.1.2 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:33:54.585224525Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-10-08T20:33:55.071737393Z Collecting markupsafe>=2.1.1 (from Flask>=2.3.0->-r requirements.txt (line 7))
+2025-10-08T20:33:55.074756738Z   Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2025-10-08T20:33:55.187226822Z Collecting iniconfig>=1 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:33:55.270674096Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-10-08T20:33:55.370992001Z Collecting packaging>=20 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:33:55.374110697Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-10-08T20:33:55.390877045Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:33:55.470739167Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-10-08T20:33:55.574645464Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->-r requirements.txt (line 15))
+2025-10-08T20:33:55.57775967Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-10-08T20:33:55.680403319Z Collecting mypy-extensions>=0.4.3 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:33:55.683684258Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2025-10-08T20:33:55.778727244Z Collecting pathspec>=0.9.0 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:33:55.781520305Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+2025-10-08T20:33:55.879943311Z Collecting platformdirs>=2 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:33:55.882482029Z   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+2025-10-08T20:33:55.98663002Z Collecting pytokens>=0.1.10 (from black>=23.0.0->-r requirements.txt (line 16))
+2025-10-08T20:33:55.99000608Z   Downloading pytokens-0.1.10-py3-none-any.whl.metadata (2.0 kB)
+2025-10-08T20:33:56.082885564Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:33:56.085670955Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2025-10-08T20:33:56.184400066Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:33:56.187252818Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-10-08T20:33:56.280676401Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8>=6.0.0->-r requirements.txt (line 17))
+2025-10-08T20:33:56.283908759Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2025-10-08T20:33:56.585708404Z Downloading aiogram-3.22.0-py3-none-any.whl (698 kB)
+2025-10-08T20:33:56.679615444Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 698.2/698.2 kB 4.9 MB/s  0:00:00
+2025-10-08T20:33:56.682445685Z Downloading aiohttp-3.12.15-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+2025-10-08T20:33:56.77738552Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 15.7 MB/s  0:00:00
+2025-10-08T20:33:56.780441175Z Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+2025-10-08T20:33:56.787886496Z Downloading magic_filter-1.0.12-py3-none-any.whl (11 kB)
+2025-10-08T20:33:56.797989265Z Downloading multidict-6.7.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (254 kB)
+2025-10-08T20:33:56.874839162Z Downloading pydantic-2.11.10-py3-none-any.whl (444 kB)
+2025-10-08T20:33:56.885252136Z Downloading pydantic_core-2.33.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2025-10-08T20:33:56.982463425Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 19.0 MB/s  0:00:00
+2025-10-08T20:33:56.98555685Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2025-10-08T20:33:56.995330805Z Downloading yarl-1.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (377 kB)
+2025-10-08T20:33:57.076916482Z Downloading aiosqlite-0.21.0-py3-none-any.whl (15 kB)
+2025-10-08T20:33:57.08420471Z Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+2025-10-08T20:33:57.091234094Z Downloading Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+2025-10-08T20:33:57.097508037Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-10-08T20:33:57.104691283Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-10-08T20:33:57.177102435Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2025-10-08T20:33:57.186430383Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-10-08T20:33:57.197452606Z Downloading black-25.9.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2025-10-08T20:33:57.283819043Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 16.8 MB/s  0:00:00
+2025-10-08T20:33:57.286634565Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2025-10-08T20:33:57.294490432Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2025-10-08T20:33:57.377241486Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2025-10-08T20:33:57.383773642Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2025-10-08T20:33:57.390825967Z Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+2025-10-08T20:33:57.39780312Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2025-10-08T20:33:57.403922161Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-10-08T20:33:57.479989576Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+2025-10-08T20:33:57.491538647Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-10-08T20:33:57.498764804Z Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+2025-10-08T20:33:57.506738542Z Downloading click-8.3.0-py3-none-any.whl (107 kB)
+2025-10-08T20:33:57.578119548Z Downloading frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (234 kB)
+2025-10-08T20:33:57.587781461Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-10-08T20:33:57.595732729Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-10-08T20:33:57.603312331Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-10-08T20:33:57.670973732Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-10-08T20:33:57.679398247Z Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2025-10-08T20:33:57.686284978Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2025-10-08T20:33:57.69245472Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-10-08T20:33:57.699165229Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+2025-10-08T20:33:57.775481168Z Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+2025-10-08T20:33:57.78436076Z Downloading propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (204 kB)
+2025-10-08T20:33:57.792714303Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-10-08T20:33:57.878234279Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 11.6 MB/s  0:00:00
+2025-10-08T20:33:57.881350565Z Downloading pytokens-0.1.10-py3-none-any.whl (12 kB)
+2025-10-08T20:33:57.887427915Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2025-10-08T20:33:58.680718172Z Installing collected packages: typing-extensions, pytokens, python-dotenv, pygments, pyflakes, pycodestyle, propcache, pluggy, platformdirs, pathspec, packaging, mypy-extensions, multidict, mccabe, markupsafe, magic-filter, itsdangerous, iniconfig, idna, frozenlist, click, certifi, blinker, attrs, annotated-types, aiohappyeyeballs, aiofiles, yarl, Werkzeug, typing-inspection, pytest, pydantic-core, jinja2, flake8, black, aiosqlite, aiosignal, pydantic, Flask, aiohttp, Flask-Login, aiogram

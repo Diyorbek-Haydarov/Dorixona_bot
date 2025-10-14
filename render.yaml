@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: pharma-bot-admin
+    env: python
+    buildCommand: pip install -r requirements.txt && python init_admin.py
+    startCommand: python run_admin.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: PORT
+        value: 10000
+  - type: worker
+    name: pharma-bot-worker
+    env: python
+    buildCommand: pip install -r requirements.txt && python init_admin.py
+    startCommand: python run_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false

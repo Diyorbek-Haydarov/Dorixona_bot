@@ -4,11 +4,11 @@ Flask admin panel application
 
 import asyncio
 import logging
+import os
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user, UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 import hashlib
-import os
 import sys
 
 # Add parent directory to path to import bot modules
@@ -324,4 +324,8 @@ if __name__ == '__main__':
     run_async(db.init_db())
     
     # Run Flask app
+<<<<<<< HEAD
     app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=443)
+=======
+    app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+>>>>>>> 6ef235d (Botpy)

@@ -26,8 +26,8 @@ async def create_admin_user():
     
     # Get admin credentials
     print("Enter admin credentials:")
-    username = input(f"Username [{ADMIN_USERNAME}]: ").strip() or ADMIN_USERNAME
-    password = getpass.getpass("Password: ").strip()
+    username = ADMIN_USERNAME
+    password = ADMIN_PASSWORD
     
     if not password:
         print("❌ Password cannot be empty")
