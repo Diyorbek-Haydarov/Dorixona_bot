@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}{{ 'Edit' if medicine.id else 'Add' }} Medicine - PharmaGuide Admin{% endblock %}
-{% block page_title %}{{ 'Edit' if medicine.id else 'Add' }} Medicine{% endblock %}
+{% block title %}{{ 'Tahrirlash' if medicine.id else 'Qo\'shish' }} Dori - PharmaGuide Admin{% endblock %}
+{% block page_title %}{{ 'Dori tahrirlash' if medicine.id else 'Yangi dori qo\'shish' }}{% endblock %}
 
 {% block page_actions %}
 <div class="btn-group">
     <a href="{{ url_for('medicines_list') }}" class="btn btn-secondary">
-        <i class="fas fa-arrow-left"></i> Back to List
+        <i class="fas fa-arrow-left"></i> Ro'yxatga qaytish
     </a>
 </div>
 {% endblock %}
@@ -17,7 +17,7 @@
         <div class="card shadow">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ 'Edit' if medicine.id else 'Add' }} Medicine Information
+                    {{ 'Dori ma\'lumotlarini tahrirlash' if medicine.id else 'Yangi dori ma\'lumotlari' }}
                 </h6>
             </div>
             <div class="card-body">
@@ -26,114 +26,100 @@
                         <!-- Latin Script Section -->
                         <div class="col-md-6">
                             <h5 class="text-primary mb-3">
-                                <i class="fas fa-language"></i> Latin Script (O'zbek)
+                                <i class="fas fa-language"></i> Lotin yozuvi (O'zbek)
                             </h5>
                             
                             <div class="mb-3">
                                 <label for="name_latin" class="form-label">
-                                    Medicine Name <span class="required">*</span>
+                                    Dori nomi <span class="required">*</span>
                                 </label>
                                 <input type="text" class="form-control" id="name_latin" name="name_latin" 
                                        value="{{ medicine.name_latin or '' }}" required>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="description_latin" class="form-label">Description</label>
+                                <label for="description_latin" class="form-label">Tavsif</label>
                                 <textarea class="form-control" id="description_latin" name="description_latin" 
                                           rows="3">{{ medicine.description_latin or '' }}</textarea>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="composition_latin" class="form-label">Composition</label>
+                                <label for="composition_latin" class="form-label">Tarkibi</label>
                                 <textarea class="form-control" id="composition_latin" name="composition_latin" 
                                           rows="3">{{ medicine.composition_latin or '' }}</textarea>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="usage_latin" class="form-label">Usage Instructions</label>
+                                <label for="usage_latin" class="form-label">Qo'llash usuli</label>
                                 <textarea class="form-control" id="usage_latin" name="usage_latin" 
                                           rows="3">{{ medicine.usage_latin or '' }}</textarea>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="side_effects_latin" class="form-label">Side Effects</label>
+                                <label for="side_effects_latin" class="form-label">Yon ta'sirlar</label>
                                 <textarea class="form-control" id="side_effects_latin" name="side_effects_latin" 
                                           rows="3">{{ medicine.side_effects_latin or '' }}</textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="voice_message_link" class="form-label">Ovozli tavsif havolasi</label>
+                                <input type="url" class="form-control" id="voice_message_link" name="voice_message_link" 
+                                       value="{{ medicine.voice_message_link or '' }}" 
+                                       placeholder="https://t.me/channel_name/123">
+                                <div class="form-text">Telegram kanalidagi ovozli xabar havolasini kiriting</div>
                             </div>
                         </div>
                         
                         <!-- Cyrillic Script Section -->
                         <div class="col-md-6">
-                            <h5 class="text-info mb-3">
-                                <i class="fas fa-language"></i> Cyrillic Script (Ўзбек)
+                            <h5 class="text-primary mb-3">
+                                <i class="fas fa-language"></i> Kirill yozuvi (Ўзбек)
+                                <button type="button" class="btn btn-sm btn-outline-primary ms-2" onclick="transliterateAll()">
+                                    <i class="fas fa-exchange-alt"></i> Avtomatik tarjima
+                                </button>
                             </h5>
                             
                             <div class="mb-3">
                                 <label for="name_cyrillic" class="form-label">
-                                    Medicine Name <span class="required">*</span>
+                                    Дори номи <span class="required">*</span>
                                 </label>
                                 <input type="text" class="form-control" id="name_cyrillic" name="name_cyrillic" 
                                        value="{{ medicine.name_cyrillic or '' }}" required>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="description_cyrillic" class="form-label">Description</label>
+                                <label for="description_cyrillic" class="form-label">Тавсиф</label>
                                 <textarea class="form-control" id="description_cyrillic" name="description_cyrillic" 
                                           rows="3">{{ medicine.description_cyrillic or '' }}</textarea>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="composition_cyrillic" class="form-label">Composition</label>
+                                <label for="composition_cyrillic" class="form-label">Таркиби</label>
                                 <textarea class="form-control" id="composition_cyrillic" name="composition_cyrillic" 
                                           rows="3">{{ medicine.composition_cyrillic or '' }}</textarea>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="usage_cyrillic" class="form-label">Usage Instructions</label>
+                                <label for="usage_cyrillic" class="form-label">Қўллаш усули</label>
                                 <textarea class="form-control" id="usage_cyrillic" name="usage_cyrillic" 
                                           rows="3">{{ medicine.usage_cyrillic or '' }}</textarea>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="side_effects_cyrillic" class="form-label">Side Effects</label>
+                                <label for="side_effects_cyrillic" class="form-label">Ён таъсирлар</label>
                                 <textarea class="form-control" id="side_effects_cyrillic" name="side_effects_cyrillic" 
                                           rows="3">{{ medicine.side_effects_cyrillic or '' }}</textarea>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Voice File ID Section -->
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <h5 class="text-success mb-3">
-                                <i class="fas fa-volume-up"></i> Voice Message
-                            </h5>
-                            
-                            <div class="mb-3">
-                                <label for="voice_file_id" class="form-label">Voice File ID</label>
-                                <input type="text" class="form-control" id="voice_file_id" name="voice_file_id" 
-                                       value="{{ medicine.voice_file_id or '' }}" 
-                                       placeholder="e.g., AwACAgIAAxkBAAI...">
-                                <div class="form-text">
-                                    <i class="fas fa-info-circle"></i> 
-                                    To get voice file ID: Send voice to your private channel, then forward to @userinfobot
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Submit Buttons -->
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <a href="{{ url_for('medicines_list') }}" class="btn btn-secondary">
-                                    <i class="fas fa-times"></i> Cancel
-                                </a>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-save"></i> {{ 'Update' if medicine.id else 'Add' }} Medicine
-                                </button>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('medicines_list') }}" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Bekor qilish
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> {{ 'Yangilash' if medicine.id else 'Saqlash' }}
+                        </button>
                     </div>
                 </form>
             </div>
@@ -144,30 +130,25 @@
     <div class="col-lg-4">
         <div class="card shadow">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">
-                    <i class="fas fa-question-circle"></i> Help
+                <h6 class="m-0 font-weight-bold text-info">
+                    <i class="fas fa-info-circle"></i> Yordam
                 </h6>
             </div>
             <div class="card-body">
-                <h6>Required Fields</h6>
-                <ul class="list-unstyled">
-                    <li><span class="required">*</span> Medicine Name (both languages)</li>
-                </ul>
+                <h6>Avtomatik tarjima</h6>
+                <p class="small text-muted">
+                    "Avtomatik tarjima" tugmasini bosing va lotin yozuvidagi matn avtomatik ravishda kirill yozuviga o'tkaziladi.
+                </p>
                 
-                <h6>Voice Messages</h6>
-                <ol>
-                    <li>Record voice description</li>
-                    <li>Send to your private channel</li>
-                    <li>Forward to @userinfobot</li>
-                    <li>Copy file_id and paste here</li>
-                </ol>
+                <h6>Majburiy maydonlar</h6>
+                <p class="small text-muted">
+                    <span class="required">*</span> belgisi bilan belgilangan maydonlar to'ldirilishi shart.
+                </p>
                 
-                <h6>Tips</h6>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-lightbulb text-warning"></i> Keep descriptions concise</li>
-                    <li><i class="fas fa-lightbulb text-warning"></i> Include dosage information</li>
-                    <li><i class="fas fa-lightbulb text-warning"></i> Mention important side effects</li>
-                </ul>
+                <h6>Ovozli tavsif</h6>
+                <p class="small text-muted">
+                    Telegram kanalidagi ovozli xabar havolasini kiriting. Masalan: https://t.me/kanal_nomi/123
+                </p>
             </div>
         </div>
     </div>
@@ -176,27 +157,123 @@
 
 {% block scripts %}
 <script>
-// Auto-resize textareas
-document.addEventListener('DOMContentLoaded', function() {
-    var textareas = document.querySelectorAll('textarea');
-    textareas.forEach(function(textarea) {
-        textarea.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
+async function transliterateText(text, direction) {
+    try {
+        const response = await fetch('/api/transliterate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                text: text,
+                direction: direction
+            })
         });
-    });
-});
-
-// Form validation
-document.querySelector('form').addEventListener('submit', function(e) {
-    var nameLatin = document.getElementById('name_latin').value.trim();
-    var nameCyrillic = document.getElementById('name_cyrillic').value.trim();
-    
-    if (!nameLatin || !nameCyrillic) {
-        e.preventDefault();
-        alert('Please fill in medicine name in both languages.');
-        return false;
+        
+        const data = await response.json();
+        if (data.success) {
+            return data.result;
+        } else {
+            console.error('Transliteration error:', data.error);
+            return text;
+        }
+    } catch (error) {
+        console.error('Transliteration request failed:', error);
+        return text;
     }
+}
+
+async function transliterateAll() {
+    const latinFields = [
+        'name_latin',
+        'description_latin', 
+        'composition_latin',
+        'usage_latin',
+        'side_effects_latin'
+    ];
+    
+    const cyrillicFields = [
+        'name_cyrillic',
+        'description_cyrillic',
+        'composition_cyrillic', 
+        'usage_cyrillic',
+        'side_effects_cyrillic'
+    ];
+    
+    // Show loading state
+    const button = event.target;
+    const originalText = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Tarjima qilinmoqda...';
+    button.disabled = true;
+    
+    try {
+        // Transliterate each field
+        for (let i = 0; i < latinFields.length; i++) {
+            const latinField = document.getElementById(latinFields[i]);
+            const cyrillicField = document.getElementById(cyrillicFields[i]);
+            
+            if (latinField && latinField.value.trim()) {
+                const transliterated = await transliterateText(latinField.value, 'latin_to_cyrillic');
+                cyrillicField.value = transliterated;
+            }
+        }
+        
+        // Show success message
+        showAlert('Muvaffaqiyatli tarjima qilindi!', 'success');
+        
+    } catch (error) {
+        console.error('Transliteration failed:', error);
+        showAlert('Tarjima qilishda xatolik yuz berdi!', 'danger');
+    } finally {
+        // Restore button state
+        button.innerHTML = originalText;
+        button.disabled = false;
+    }
+}
+
+function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    // Insert at the top of the content
+    const content = document.querySelector('.main-content');
+    content.insertBefore(alertDiv, content.firstChild);
+    
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+        if (alertDiv.parentNode) {
+            alertDiv.remove();
+        }
+    }, 3000);
+}
+
+// Auto-transliterate on input (optional)
+document.addEventListener('DOMContentLoaded', function() {
+    const latinFields = ['name_latin', 'description_latin', 'composition_latin', 'usage_latin', 'side_effects_latin'];
+    
+    latinFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            let timeout;
+            field.addEventListener('input', function() {
+                clearTimeout(timeout);
+                timeout = setTimeout(async () => {
+                    if (this.value.trim()) {
+                        const cyrillicFieldId = fieldId.replace('_latin', '_cyrillic');
+                        const cyrillicField = document.getElementById(cyrillicFieldId);
+                        if (cyrillicField && !cyrillicField.value.trim()) {
+                            const transliterated = await transliterateText(this.value, 'latin_to_cyrillic');
+                            cyrillicField.value = transliterated;
+                        }
+                    }
+                }, 1000); // Wait 1 second after user stops typing
+            });
+        }
+    });
 });
 </script>
 {% endblock %}

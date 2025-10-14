@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,28 +59,28 @@
                         <h4 class="text-white">
                             <i class="fas fa-pills"></i> PharmaGuide
                         </h4>
-                        <small class="text-muted">Admin Panel</small>
+                        <small class="text-muted">Admin Paneli</small>
                     </div>
                     
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}">
-                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                                <i class="fas fa-tachometer-alt"></i> Boshqaruv paneli
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.endpoint in ['medicines_list', 'add_medicine', 'edit_medicine'] %}active{% endif %}" href="{{ url_for('medicines_list') }}">
-                                <i class="fas fa-pills"></i> Medicines
+                                <i class="fas fa-pills"></i> Dorilar
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.endpoint in ['first_aid_list', 'add_first_aid', 'edit_first_aid'] %}active{% endif %}" href="{{ url_for('first_aid_list') }}">
-                                <i class="fas fa-first-aid"></i> First Aid
+                                <i class="fas fa-first-aid"></i> Birinchi yordam
                             </a>
                         </li>
                         <li class="nav-item mt-3">
                             <a class="nav-link text-danger" href="{{ url_for('logout') }}">
-                                <i class="fas fa-sign-out-alt"></i> Logout
+                                <i class="fas fa-sign-out-alt"></i> Chiqish
                             </a>
                         </li>
                     </ul>
@@ -90,7 +90,7 @@
             <!-- Main content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">{% block page_title %}Dashboard{% endblock %}</h1>
+                    <h1 class="h2">{% block page_title %}Boshqaruv paneli{% endblock %}</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         {% block page_actions %}{% endblock %}
                     </div>
@@ -130,7 +130,7 @@
             var deleteButtons = document.querySelectorAll('.btn-delete');
             deleteButtons.forEach(function(button) {
                 button.addEventListener('click', function(e) {
-                    if (!confirm('Are you sure you want to delete this item?')) {
+                    if (!confirm('Bu elementni o\'chirishni xohlaysizmi?')) {
                         e.preventDefault();
                     }
                 });

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard - PharmaGuide Admin{% endblock %}
-{% block page_title %}Dashboard{% endblock %}
+{% block title %}Boshqaruv paneli - PharmaGuide Admin{% endblock %}
+{% block page_title %}Boshqaruv paneli{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -12,7 +12,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Total Users
+                            Jami foydalanuvchilar
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             {{ stats.get('total_users', 0) }}
@@ -32,7 +32,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Active Users (7 days)
+                            Faol foydalanuvchilar (7 kun)
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             {{ stats.get('active_users', 0) }}
@@ -52,7 +52,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                            Total Medicines
+                            Jami dorilar
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             {{ stats.get('total_medicines', 0) }}
@@ -72,7 +72,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                            Recent Users
+                            Yangi foydalanuvchilar
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             {{ stats.get('recent_users', [])|length }}
@@ -92,7 +92,7 @@
     <div class="col-lg-8 mb-4">
         <div class="card shadow">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Recent Users</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Yangi foydalanuvchilar</h6>
             </div>
             <div class="card-body">
                 {% if stats.get('recent_users') %}
@@ -101,10 +101,10 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Username</th>
-                                    <th>First Name</th>
-                                    <th>Language</th>
-                                    <th>Joined</th>
+                                    <th>Foydalanuvchi nomi</th>
+                                    <th>Ism</th>
+                                    <th>Til</th>
+                                    <th>Qo'shilgan sana</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -115,7 +115,7 @@
                                     <td>{{ user.first_name or 'N/A' }}</td>
                                     <td>
                                         <span class="badge bg-{{ 'primary' if user.language_code == 'uz_latin' else 'info' }}">
-                                            {{ 'Latin' if user.language_code == 'uz_latin' else 'Cyrillic' }}
+                                            {{ 'Lotin' if user.language_code == 'uz_latin' else 'Kirill' }}
                                         </span>
                                     </td>
                                     <td>{{ user.created_at[:10] if user.created_at else 'N/A' }}</td>
@@ -125,7 +125,7 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="text-muted">No recent users found.</p>
+                    <p class="text-muted">Yangi foydalanuvchilar topilmadi.</p>
                 {% endif %}
             </div>
         </div>
@@ -135,21 +135,21 @@
     <div class="col-lg-4 mb-4">
         <div class="card shadow">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tezkor amallar</h6>
             </div>
             <div class="card-body">
                 <div class="d-grid gap-2">
                     <a href="{{ url_for('add_medicine') }}" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> Add Medicine
+                        <i class="fas fa-plus"></i> Yangi dori qo'shish
                     </a>
                     <a href="{{ url_for('add_first_aid') }}" class="btn btn-success">
-                        <i class="fas fa-plus"></i> Add First Aid Article
+                        <i class="fas fa-plus"></i> Yangi birinchi yordam maqolasi
                     </a>
                     <a href="{{ url_for('medicines_list') }}" class="btn btn-info">
-                        <i class="fas fa-list"></i> View All Medicines
+                        <i class="fas fa-list"></i> Barcha dorilarni ko'rish
                     </a>
                     <a href="{{ url_for('first_aid_list') }}" class="btn btn-warning">
-                        <i class="fas fa-list"></i> View First Aid Articles
+                        <i class="fas fa-list"></i> Birinchi yordam maqolalarini ko'rish
                     </a>
                 </div>
             </div>
@@ -162,28 +162,29 @@
     <div class="col-12">
         <div class="card shadow">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">System Information</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tizim ma'lumotlari</h6>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <h6>Bot Features</h6>
+                        <h6>Bot imkoniyatlari</h6>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success"></i> Bilingual Support (Latin/Cyrillic)</li>
-                            <li><i class="fas fa-check text-success"></i> Medicine Search</li>
-                            <li><i class="fas fa-check text-success"></i> Voice Messages</li>
-                            <li><i class="fas fa-check text-success"></i> First Aid Articles</li>
-                            <li><i class="fas fa-check text-success"></i> User Statistics</li>
+                            <li><i class="fas fa-check text-success"></i> Ikki tilli qo'llab-quvvatlash (Lotin/Kirill)</li>
+                            <li><i class="fas fa-check text-success"></i> Dori qidirish</li>
+                            <li><i class="fas fa-check text-success"></i> Ovozli xabarlar</li>
+                            <li><i class="fas fa-check text-success"></i> Birinchi yordam maqolalari</li>
+                            <li><i class="fas fa-check text-success"></i> Foydalanuvchi statistikasi</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <h6>Admin Features</h6>
+                        <h6>Admin imkoniyatlari</h6>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success"></i> Medicine Management</li>
-                            <li><i class="fas fa-check text-success"></i> First Aid Management</li>
-                            <li><i class="fas fa-check text-success"></i> User Analytics</li>
-                            <li><i class="fas fa-check text-success"></i> Bilingual Forms</li>
-                            <li><i class="fas fa-check text-success"></i> Voice File Integration</li>
+                            <li><i class="fas fa-check text-success"></i> Dori boshqaruvi</li>
+                            <li><i class="fas fa-check text-success"></i> Birinchi yordam boshqaruvi</li>
+                            <li><i class="fas fa-check text-success"></i> Foydalanuvchi tahlili</li>
+                            <li><i class="fas fa-check text-success"></i> Ikki tilli formlar</li>
+                            <li><i class="fas fa-check text-success"></i> Avtomatik transliteratsiya</li>
+                            <li><i class="fas fa-check text-success"></i> Ovozli fayl integratsiyasi</li>
                         </ul>
                     </div>
                 </div>

@@ -16,6 +16,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from bot.database import db
 from bot.config import FLASK_SECRET_KEY, FLASK_ENV, AdminTexts
+from bot.utils.transliteration import latin_to_cyrillic, cyrillic_to_latin
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -318,6 +319,28 @@ def delete_first_aid(article_id):
         flash("Error deleting first aid article", "error")
     
     return redirect(url_for('first_aid_list'))
+
+@app.route('/api/transliterate', methods=['POST'])
+@login_required
+def transliterate_text():
+    """API endpoint for text transliteration"""
+    try:
+        data = request.get_json()
+        text = data.get('text', '')
+        direction = data.get('direction', 'latin_to_cyrillic')
+        
+        if direction == 'latin_to_cyrillic':
+            result = latin_to_cyrillic(text)
+        elif direction == 'cyrillic_to_latin':
+            result = cyrillic_to_latin(text)
+        else:
+            result = text
+        
+        return jsonify({'success': True, 'result': result})
+        
+    except Exception as e:
+        logger.error(f"Error in transliteration: {e}")
+        return jsonify({'success': False, 'error': str(e)})
 
 if __name__ == '__main__':
     # Initialize database

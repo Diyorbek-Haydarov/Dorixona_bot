@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}{{ 'Edit' if article.id else 'Add' }} First Aid Article - PharmaGuide Admin{% endblock %}
-{% block page_title %}{{ 'Edit' if article.id else 'Add' }} First Aid Article{% endblock %}
+{% block title %}{{ 'Tahrirlash' if article.id else 'Qo\'shish' }} Birinchi yordam maqolasi - PharmaGuide Admin{% endblock %}
+{% block page_title %}{{ 'Birinchi yordam maqolasini tahrirlash' if article.id else 'Yangi birinchi yordam maqolasi' }}{% endblock %}
 
 {% block page_actions %}
 <div class="btn-group">
     <a href="{{ url_for('first_aid_list') }}" class="btn btn-secondary">
-        <i class="fas fa-arrow-left"></i> Back to List
+        <i class="fas fa-arrow-left"></i> Ro'yxatga qaytish
     </a>
 </div>
 {% endblock %}
@@ -17,7 +17,7 @@
         <div class="card shadow">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ 'Edit' if article.id else 'Add' }} First Aid Article
+                    {{ 'Birinchi yordam maqolasini tahrirlash' if article.id else 'Yangi birinchi yordam maqolasi' }}
                 </h6>
             </div>
             <div class="card-body">
@@ -26,85 +26,56 @@
                         <!-- Latin Script Section -->
                         <div class="col-md-6">
                             <h5 class="text-primary mb-3">
-                                <i class="fas fa-language"></i> Latin Script (O'zbek)
+                                <i class="fas fa-language"></i> Lotin yozuvi (O'zbek)
                             </h5>
                             
                             <div class="mb-3">
                                 <label for="title_latin" class="form-label">
-                                    Article Title <span class="required">*</span>
+                                    Sarlavha <span class="required">*</span>
                                 </label>
                                 <input type="text" class="form-control" id="title_latin" name="title_latin" 
                                        value="{{ article.title_latin or '' }}" required>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="content_latin" class="form-label">
-                                    Article Content <span class="required">*</span>
-                                </label>
+                                <label for="content_latin" class="form-label">Mazmuni</label>
                                 <textarea class="form-control" id="content_latin" name="content_latin" 
-                                          rows="8" required>{{ article.content_latin or '' }}</textarea>
+                                          rows="8">{{ article.content_latin or '' }}</textarea>
                             </div>
                         </div>
                         
                         <!-- Cyrillic Script Section -->
                         <div class="col-md-6">
-                            <h5 class="text-info mb-3">
-                                <i class="fas fa-language"></i> Cyrillic Script (Ўзбек)
+                            <h5 class="text-primary mb-3">
+                                <i class="fas fa-language"></i> Kirill yozuvi (Ўзбек)
+                                <button type="button" class="btn btn-sm btn-outline-primary ms-2" onclick="transliterateAll()">
+                                    <i class="fas fa-exchange-alt"></i> Avtomatik tarjima
+                                </button>
                             </h5>
                             
                             <div class="mb-3">
                                 <label for="title_cyrillic" class="form-label">
-                                    Article Title <span class="required">*</span>
+                                    Сарлавҳа <span class="required">*</span>
                                 </label>
                                 <input type="text" class="form-control" id="title_cyrillic" name="title_cyrillic" 
                                        value="{{ article.title_cyrillic or '' }}" required>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="content_cyrillic" class="form-label">
-                                    Article Content <span class="required">*</span>
-                                </label>
+                                <label for="content_cyrillic" class="form-label">Мазмуни</label>
                                 <textarea class="form-control" id="content_cyrillic" name="content_cyrillic" 
-                                          rows="8" required>{{ article.content_cyrillic or '' }}</textarea>
+                                          rows="8">{{ article.content_cyrillic or '' }}</textarea>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Category Section -->
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <h5 class="text-success mb-3">
-                                <i class="fas fa-tags"></i> Category
-                            </h5>
-                            
-                            <div class="mb-3">
-                                <label for="category" class="form-label">Category</label>
-                                <select class="form-select" id="category" name="category">
-                                    <option value="general" {{ 'selected' if article.category == 'general' else '' }}>General</option>
-                                    <option value="emergency" {{ 'selected' if article.category == 'emergency' else '' }}>Emergency</option>
-                                    <option value="wounds" {{ 'selected' if article.category == 'wounds' else '' }}>Wounds</option>
-                                    <option value="burns" {{ 'selected' if article.category == 'burns' else '' }}>Burns</option>
-                                    <option value="poisoning" {{ 'selected' if article.category == 'poisoning' else '' }}>Poisoning</option>
-                                    <option value="choking" {{ 'selected' if article.category == 'choking' else '' }}>Choking</option>
-                                    <option value="heart" {{ 'selected' if article.category == 'heart' else '' }}>Heart Attack</option>
-                                    <option value="stroke" {{ 'selected' if article.category == 'stroke' else '' }}>Stroke</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Submit Buttons -->
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <a href="{{ url_for('first_aid_list') }}" class="btn btn-secondary">
-                                    <i class="fas fa-times"></i> Cancel
-                                </a>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-save"></i> {{ 'Update' if article.id else 'Add' }} Article
-                                </button>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('first_aid_list') }}" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Bekor qilish
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> {{ 'Yangilash' if article.id else 'Saqlash' }}
+                        </button>
                     </div>
                 </form>
             </div>
@@ -115,36 +86,25 @@
     <div class="col-lg-4">
         <div class="card shadow">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">
-                    <i class="fas fa-question-circle"></i> Help
+                <h6 class="m-0 font-weight-bold text-info">
+                    <i class="fas fa-info-circle"></i> Yordam
                 </h6>
             </div>
             <div class="card-body">
-                <h6>Required Fields</h6>
-                <ul class="list-unstyled">
-                    <li><span class="required">*</span> Article Title (both languages)</li>
-                    <li><span class="required">*</span> Article Content (both languages)</li>
-                </ul>
+                <h6>Avtomatik tarjima</h6>
+                <p class="small text-muted">
+                    "Avtomatik tarjima" tugmasini bosing va lotin yozuvidagi matn avtomatik ravishda kirill yozuviga o'tkaziladi.
+                </p>
                 
-                <h6>Categories</h6>
-                <ul class="list-unstyled">
-                    <li><span class="badge bg-secondary">General</span> General first aid</li>
-                    <li><span class="badge bg-danger">Emergency</span> Emergency situations</li>
-                    <li><span class="badge bg-warning">Wounds</span> Cuts and injuries</li>
-                    <li><span class="badge bg-danger">Burns</span> Burn treatment</li>
-                    <li><span class="badge bg-dark">Poisoning</span> Poisoning cases</li>
-                    <li><span class="badge bg-info">Choking</span> Choking assistance</li>
-                    <li><span class="badge bg-danger">Heart</span> Heart attack</li>
-                    <li><span class="badge bg-primary">Stroke</span> Stroke symptoms</li>
-                </ul>
+                <h6>Majburiy maydonlar</h6>
+                <p class="small text-muted">
+                    <span class="required">*</span> belgisi bilan belgilangan maydonlar to'ldirilishi shart.
+                </p>
                 
-                <h6>Writing Tips</h6>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-lightbulb text-warning"></i> Use clear, simple language</li>
-                    <li><i class="fas fa-lightbulb text-warning"></i> Include step-by-step instructions</li>
-                    <li><i class="fas fa-lightbulb text-warning"></i> Mention when to call emergency services</li>
-                    <li><i class="fas fa-lightbulb text-warning"></i> Keep content concise but complete</li>
-                </ul>
+                <h6>Birinchi yordam maqolasi</h6>
+                <p class="small text-muted">
+                    Bu maqola foydalanuvchilar uchun birinchi yordam bo'yicha foydali ma'lumotlar o'z ichiga oladi.
+                </p>
             </div>
         </div>
     </div>
@@ -153,29 +113,117 @@
 
 {% block scripts %}
 <script>
-// Auto-resize textareas
-document.addEventListener('DOMContentLoaded', function() {
-    var textareas = document.querySelectorAll('textarea');
-    textareas.forEach(function(textarea) {
-        textarea.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
+async function transliterateText(text, direction) {
+    try {
+        const response = await fetch('/api/transliterate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                text: text,
+                direction: direction
+            })
         });
-    });
-});
-
-// Form validation
-document.querySelector('form').addEventListener('submit', function(e) {
-    var titleLatin = document.getElementById('title_latin').value.trim();
-    var titleCyrillic = document.getElementById('title_cyrillic').value.trim();
-    var contentLatin = document.getElementById('content_latin').value.trim();
-    var contentCyrillic = document.getElementById('content_cyrillic').value.trim();
-    
-    if (!titleLatin || !titleCyrillic || !contentLatin || !contentCyrillic) {
-        e.preventDefault();
-        alert('Please fill in all required fields in both languages.');
-        return false;
+        
+        const data = await response.json();
+        if (data.success) {
+            return data.result;
+        } else {
+            console.error('Transliteration error:', data.error);
+            return text;
+        }
+    } catch (error) {
+        console.error('Transliteration request failed:', error);
+        return text;
     }
+}
+
+async function transliterateAll() {
+    const latinFields = [
+        'title_latin',
+        'content_latin'
+    ];
+    
+    const cyrillicFields = [
+        'title_cyrillic',
+        'content_cyrillic'
+    ];
+    
+    // Show loading state
+    const button = event.target;
+    const originalText = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Tarjima qilinmoqda...';
+    button.disabled = true;
+    
+    try {
+        // Transliterate each field
+        for (let i = 0; i < latinFields.length; i++) {
+            const latinField = document.getElementById(latinFields[i]);
+            const cyrillicField = document.getElementById(cyrillicFields[i]);
+            
+            if (latinField && latinField.value.trim()) {
+                const transliterated = await transliterateText(latinField.value, 'latin_to_cyrillic');
+                cyrillicField.value = transliterated;
+            }
+        }
+        
+        // Show success message
+        showAlert('Muvaffaqiyatli tarjima qilindi!', 'success');
+        
+    } catch (error) {
+        console.error('Transliteration failed:', error);
+        showAlert('Tarjima qilishda xatolik yuz berdi!', 'danger');
+    } finally {
+        // Restore button state
+        button.innerHTML = originalText;
+        button.disabled = false;
+    }
+}
+
+function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    // Insert at the top of the content
+    const content = document.querySelector('.main-content');
+    content.insertBefore(alertDiv, content.firstChild);
+    
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+        if (alertDiv.parentNode) {
+            alertDiv.remove();
+        }
+    }, 3000);
+}
+
+// Auto-transliterate on input (optional)
+document.addEventListener('DOMContentLoaded', function() {
+    const latinFields = ['title_latin', 'content_latin'];
+    
+    latinFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            let timeout;
+            field.addEventListener('input', function() {
+                clearTimeout(timeout);
+                timeout = setTimeout(async () => {
+                    if (this.value.trim()) {
+                        const cyrillicFieldId = fieldId.replace('_latin', '_cyrillic');
+                        const cyrillicField = document.getElementById(cyrillicFieldId);
+                        if (cyrillicField && !cyrillicField.value.trim()) {
+                            const transliterated = await transliterateText(this.value, 'latin_to_cyrillic');
+                            cyrillicField.value = transliterated;
+                        }
+                    }
+                }, 1000); // Wait 1 second after user stops typing
+            });
+        }
+    });
 });
 </script>
 {% endblock %}

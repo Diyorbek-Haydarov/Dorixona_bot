@@ -164,21 +164,21 @@ Tilni tanlang:"""
 
 # Admin Messages
 class AdminTexts:
-    LOGIN_REQUIRED = "Please log in to access this page."
-    INVALID_CREDENTIALS = "Invalid username or password."
-    LOGIN_SUCCESS = "Successfully logged in."
-    LOGOUT_SUCCESS = "Successfully logged out."
+    LOGIN_REQUIRED = "Bu sahifaga kirish uchun tizimga kiring."
+    INVALID_CREDENTIALS = "Noto'g'ri foydalanuvchi nomi yoki parol."
+    LOGIN_SUCCESS = "Muvaffaqiyatli tizimga kirdingiz."
+    LOGOUT_SUCCESS = "Muvaffaqiyatli tizimdan chiqdingiz."
     
     # Medicine Management
-    MEDICINE_ADDED = "Medicine added successfully."
-    MEDICINE_UPDATED = "Medicine updated successfully."
-    MEDICINE_DELETED = "Medicine deleted successfully."
+    MEDICINE_ADDED = "Dori muvaffaqiyatli qo'shildi."
+    MEDICINE_UPDATED = "Dori muvaffaqiyatli yangilandi."
+    MEDICINE_DELETED = "Dori muvaffaqiyatli o'chirildi."
     
     # First Aid Management
-    FIRST_AID_ADDED = "First aid article added successfully."
-    FIRST_AID_UPDATED = "First aid article updated successfully."
-    FIRST_AID_DELETED = "First aid article deleted successfully."
+    FIRST_AID_ADDED = "Birinchi yordam maqolasi muvaffaqiyatli qo'shildi."
+    FIRST_AID_UPDATED = "Birinchi yordam maqolasi muvaffaqiyatli yangilandi."
+    FIRST_AID_DELETED = "Birinchi yordam maqolasi muvaffaqiyatli o'chirildi."
     
     # Validation Messages
-    REQUIRED_FIELD = "This field is required."
-    INVALID_FORMAT = "Invalid format."
+    REQUIRED_FIELD = "Bu maydon to'ldirilishi shart."
+    INVALID_FORMAT = "Noto'g'ri format."
