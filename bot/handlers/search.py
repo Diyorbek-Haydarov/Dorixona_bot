@@ -144,14 +144,17 @@ async def send_voice_message(callback: CallbackQuery):
         user_id = callback.from_user.id
         user_language = await db.get_user_language(user_id)
         
-        # Extract file_id from callback data
-        file_id = callback.data.replace("voice_", "")
+        # Extract medicine_id from callback data
+        medicine_id = int(callback.data.replace("voice_", ""))
         
-        if file_id and file_id != "none":
+        # Get medicine details to get voice_file_id
+        medicine = await db.get_medicine_by_id(medicine_id)
+        
+        if medicine and medicine.get('voice_file_id'):
             # Send voice message
             await callback.bot.send_voice(
                 chat_id=callback.message.chat.id,
-                voice=file_id
+                voice=medicine['voice_file_id']
             )
             
             if user_language == LANG_CYRILLIC:
@@ -192,7 +195,7 @@ def create_medicine_keyboard(medicine: dict, user_language: str) -> InlineKeyboa
             voice_text = "🎵 Ovozli tavsif"
         buttons.append([InlineKeyboardButton(
             text=voice_text,
-            callback_data=f"voice_{medicine['voice_file_id']}"
+            callback_data=f"voice_{medicine['id']}"
         )])
     
     # Add back button

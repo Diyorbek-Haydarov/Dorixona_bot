@@ -127,6 +127,45 @@ async def show_medicine_details(callback: CallbackQuery):
         logger.error(f"Error showing medicine details: {e}")
         await callback.answer("Xatolik yuz berdi", show_alert=True)
 
+@router.callback_query(F.data.startswith("voice_"))
+async def send_voice_message(callback: CallbackQuery):
+    """Handle voice message request"""
+    try:
+        user_id = callback.from_user.id
+        user_language = await db.get_user_language(user_id)
+        
+        # Extract medicine_id from callback data
+        medicine_id = int(callback.data.replace("voice_", ""))
+        
+        # Get medicine details to get voice_file_id
+        medicine = await db.get_medicine_by_id(medicine_id)
+        
+        if medicine and medicine.get('voice_file_id'):
+            # Send voice message
+            await callback.bot.send_voice(
+                chat_id=callback.message.chat.id,
+                voice=medicine['voice_file_id']
+            )
+            
+            if user_language == LANG_CYRILLIC:
+                await callback.answer("Овозли тавсиф юборилди")
+            else:
+                await callback.answer("Ovozli tavsif yuborildi")
+        else:
+            if user_language == LANG_CYRILLIC:
+                await callback.answer("Овозли тавсиф мавжуд эмас", show_alert=True)
+            else:
+                await callback.answer("Ovozli tavsif mavjud emas", show_alert=True)
+        
+        await callback.answer()
+        
+    except Exception as e:
+        logger.error(f"Error sending voice message: {e}")
+        if user_language == LANG_CYRILLIC:
+            await callback.answer("Овозли тавсиф юборишда хатолик", show_alert=True)
+        else:
+            await callback.answer("Ovozli tavsif yuborishda xatolik", show_alert=True)
+
 def format_medicines_list(medicines: list, user_language: str, page: int, total: int) -> str:
     """Format medicines list for display"""
     if user_language == LANG_CYRILLIC:
@@ -224,7 +263,7 @@ def create_medicine_detail_keyboard(medicine: dict, user_language: str) -> Inlin
             voice_text = "🎵 Ovozli tavsif"
         buttons.append([InlineKeyboardButton(
             text=voice_text,
-            callback_data=f"voice_{medicine['voice_file_id']}"
+            callback_data=f"voice_{medicine['id']}"
         )])
     
     # Add back to list button
