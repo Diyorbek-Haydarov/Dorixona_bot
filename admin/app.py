@@ -324,8 +324,4 @@ if __name__ == '__main__':
     run_async(db.init_db())
     
     # Run Flask app
-<<<<<<< HEAD
-    app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=443)
-=======
-    app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
->>>>>>> 6ef235d (Botpy)
+    app.run(debug=(FLASK_ENV == 'development'), host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
