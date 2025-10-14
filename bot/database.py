@@ -46,7 +46,7 @@ class Database:
                         usage_cyrillic TEXT,
                         side_effects_latin TEXT,
                         side_effects_cyrillic TEXT,
-                        voice_file_id TEXT,
+                        voice_message_link TEXT,
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                     )
@@ -359,7 +359,7 @@ class Database:
                     """INSERT INTO medicines (
                         name_latin, name_cyrillic, description_latin, description_cyrillic,
                         composition_latin, composition_cyrillic, usage_latin, usage_cyrillic,
-                        side_effects_latin, side_effects_cyrillic, voice_file_id
+                        side_effects_latin, side_effects_cyrillic, voice_message_link
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                     (
                         medicine_data.get('name_latin', ''),
@@ -372,7 +372,7 @@ class Database:
                         medicine_data.get('usage_cyrillic', ''),
                         medicine_data.get('side_effects_latin', ''),
                         medicine_data.get('side_effects_cyrillic', ''),
-                        medicine_data.get('voice_file_id', '')
+                        medicine_data.get('voice_message_link', '')
                     )
                 )
                 await db.commit()
@@ -390,7 +390,7 @@ class Database:
                     """UPDATE medicines SET 
                         name_latin = ?, name_cyrillic = ?, description_latin = ?, description_cyrillic = ?,
                         composition_latin = ?, composition_cyrillic = ?, usage_latin = ?, usage_cyrillic = ?,
-                        side_effects_latin = ?, side_effects_cyrillic = ?, voice_file_id = ?,
+                        side_effects_latin = ?, side_effects_cyrillic = ?, voice_message_link = ?,
                         updated_at = CURRENT_TIMESTAMP
                         WHERE id = ?""",
                     (
@@ -404,7 +404,7 @@ class Database:
                         medicine_data.get('usage_cyrillic', ''),
                         medicine_data.get('side_effects_latin', ''),
                         medicine_data.get('side_effects_cyrillic', ''),
-                        medicine_data.get('voice_file_id', ''),
+                        medicine_data.get('voice_message_link', ''),
                         medicine_id
                     )
                 )

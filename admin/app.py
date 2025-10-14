@@ -121,7 +121,7 @@ def add_medicine():
                 'usage_cyrillic': request.form.get('usage_cyrillic', ''),
                 'side_effects_latin': request.form.get('side_effects_latin', ''),
                 'side_effects_cyrillic': request.form.get('side_effects_cyrillic', ''),
-                'voice_file_id': request.form.get('voice_file_id', '')
+                'voice_message_link': request.form.get('voice_message_link', '')
             }
             
             # Validate required fields
@@ -166,7 +166,7 @@ def edit_medicine(medicine_id):
                 'usage_cyrillic': request.form.get('usage_cyrillic', ''),
                 'side_effects_latin': request.form.get('side_effects_latin', ''),
                 'side_effects_cyrillic': request.form.get('side_effects_cyrillic', ''),
-                'voice_file_id': request.form.get('voice_file_id', '')
+                'voice_message_link': request.form.get('voice_message_link', '')
             }
             
             # Validate required fields

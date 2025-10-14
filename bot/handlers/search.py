@@ -11,6 +11,7 @@ from ..database import db
 from ..config import LANG_LATIN, LANG_CYRILLIC, Texts, Buttons
 from ..keyboards.main_menu import get_main_menu_keyboard
 from ..utils.text_formatter import format_medicine_info
+from ..utils.telegram_voice_retriever import send_voice_from_channel_link
 
 logger = logging.getLogger(__name__)
 router = Router()
@@ -150,12 +151,20 @@ async def send_voice_message(callback: CallbackQuery):
         # Get medicine details to get voice_file_id
         medicine = await db.get_medicine_by_id(medicine_id)
         
-        if medicine and medicine.get('voice_file_id'):
-            # Send voice message
-            await callback.bot.send_voice(
+        if medicine and medicine.get('voice_message_link'):
+            # Send voice message from channel link
+            success = await send_voice_from_channel_link(
+                bot=callback.bot,
                 chat_id=callback.message.chat.id,
-                voice=medicine['voice_file_id']
+                message_link=medicine['voice_message_link']
             )
+            
+            if not success:
+                if user_language == LANG_CYRILLIC:
+                    await callback.answer("Овозли тавсифни юборишда хатолик", show_alert=True)
+                else:
+                    await callback.answer("Ovozli tavsifni yuborishda xatolik", show_alert=True)
+                return
             
             if user_language == LANG_CYRILLIC:
                 await callback.answer("Овозли тавсиф юборилди")
@@ -188,7 +197,7 @@ def create_medicine_keyboard(medicine: dict, user_language: str) -> InlineKeyboa
     buttons = []
     
     # Add voice button if available
-    if medicine.get('voice_file_id'):
+    if medicine.get('voice_message_link'):
         if user_language == LANG_CYRILLIC:
             voice_text = "🎵 Овозли тавсиф"
         else:
